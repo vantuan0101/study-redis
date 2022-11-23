@@ -1,0 +1,64 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Dracula",
+
+  "editor.tabSize": 2,
+  "eslint.nodePath": "/Users/vantuan/.nvm/versions/node/v18.12.0/lib",
+  "eslint.runtime": "/Users/vantuan/.nvm/versions/node/v18.12.0/bin/node",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.options": {
+    "overrideConfigFile": "/Users/vantuan/.eslintrc.js"
+  },
+  "eslint.format.enable": false,
+
+  "bracketPairColorizer.depreciation-notice": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmDragAndDrop": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.startupEditor": "none",
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "[handlebars]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.inlineSuggest.enabled": true,
+  "git.autofetch": true,
+  "editor.accessibilitySupport": "off",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": true
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "security.workspace.trust.untrustedFiles": "open"
+}
