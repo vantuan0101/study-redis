@@ -1,8 +1,34 @@
+### Cache
+Cache là bộ nhớ đệm lưu trữ các dữ liệu tạm thời .
+Cache được sử dụng để lưu trữ dữ liệu tạm thời, giúp tăng tốc độ truy xuất dữ liệu.
+**Read**
+- Cache aside : Đầu tiên đọc xuống Cache , không có Cache báo về App , từ App đọc xuống DB rồi DB trả về App và cuối cùng App lưu cache lại.
+- Read through : Từ App đọc xuống Cache , không có sẽ đọc thẳng qua DB rồi Cache và update Cache lại.
+
+**Write**
+- Write around : Từ App ghi xuống DB đọc từ Cache xong rồi đọc từ DB rồi write xuống Cache.
+- Write through : Từ App ghi xuống Cache rồi lưu vào DB luôn.
+
+**Các loại Cache**
+- Network Cache : Là bộ nhớ đệm lưu trữ các dữ liệu tạm thời trên mạng.
+- Web Cache : Là bộ nhớ đệm lưu trữ các dữ liệu tạm thời trên trình duyệt web.
+- In-Memory Cache : Là bộ nhớ đệm lưu trữ các dữ liệu tạm thời trên bộ nhớ RAM.
+
 ### Redis
 
-Redis có tỉ lệ đọc và ghi ( set và get ) nhanh gấp 100 ngàn lần so với MySQL cùng  một cấu hình VPS. 
-Redis có thể lưu trữ dữ liệu dưới dạng key-value, có thể lưu trữ dữ liệu dưới dạng list, set, sorted set, hash, bitmap, hyperloglog, geospatial. Redis có thể lưu trữ dữ liệu dưới dạng key-value, có thể lưu trữ dữ liệu dưới dạng list, set, sorted set, hash, bitmap, hyperloglog, geospatial.
+- Redis chỉ là In-memory database . 
+- Các database khác sử dụng Disk để lưu dữ liệu còn Redis dùng Ram vì vậy tốc độ rất nhanh
+- Redis có tỉ lệ đọc và ghi ( set và get ) nhanh gấp 100 ngàn lần so với MySQL cùng  một cấu hình VPS. 
+- Redis thường được dùng để lưu các dữ liệu mà truy cập nhiều , ít bị thay đổi hoặc tốn rất nhiều thời gian để tính toán.
+- Redis là single thred , IO Multiplexing ( nghĩa là nó sử dụng một luồng duy nhất để xử lý tất cả các yêu cầu , nó sử dụng I/O Multiplexing để xử lý các yêu cầu đồng thời ) , event loop 
+- Redis có thể lưu trữ dữ liệu dưới dạng key-value
 
+**Nhược điểm**
+- Vì lưu ở RAM nên khi server mất điện là mất dữ liệu nếu không backup
+- Size Ram nhỏ nên không thể lưu được dữ liệu lớn
+
+> Tốc độ đọc xếp theo giảm dần
+> Register > L1 cache > L2 cache > L3 cache > RAM > SSD > HDD
 ### Redis Data Structures
 - Keys & Expiration 
 - Strings
